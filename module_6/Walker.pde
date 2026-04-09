@@ -4,12 +4,10 @@ public class Walker
   public PVector velocity = new PVector();
   public PVector acceleration = new PVector();
   
-  public float velocityLimit = 10;
+  public float velocityLimit = 15;
   public float scale = 15;
   public float mass = 1;
   public color c;
-  
-  public Walker() {}
   
   public void applyForce(PVector force)
   {
@@ -22,13 +20,14 @@ public class Walker
     this.velocity.add(this.acceleration);
     this.velocity.limit(velocityLimit);
     this.position.add(this.velocity);
-    this.acceleration.mult(0); 
+    this.acceleration.mult(0);
   }
   
   public void render()
   {
     fill(c);
-    noStroke();
+    stroke(0);
+    strokeWeight(1);
     circle(position.x, position.y, scale);
   }
 }
