@@ -16,7 +16,7 @@ void setup()
     walkers[i].scale = walkers[i].mass * 15;
 
     walkers[i].position = new PVector(-500, 200);
-    walkers[i].c = color(random(255), random(255), random(255), 50);
+    walkers[i].c = color(random(255), random(255), random(255), 70);
   }
 }
 
